@@ -16,8 +16,10 @@ import org.springframework.core.io.Resource;
 @Configuration
 public class Step1Configuration {
 
+
+
   @Bean
-  FlatFileItemReader<Person> fileReader(@Value("${input}") Resource in) {
+  FlatFileItemReader<Person> fileReader(@Value("classpath:input.csv") Resource in) {
     return new FlatFileItemReaderBuilder<Person>()
         .name("file-reader")
         .resource(in)

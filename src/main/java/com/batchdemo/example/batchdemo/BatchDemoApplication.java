@@ -17,13 +17,6 @@ import org.springframework.context.annotation.Bean;
 public class BatchDemoApplication {
 
   public static void main(String[] args) {
-    System.setProperty("input",
-        "file://" + new File("/Users/jcthalys/Downloads/batch-demo/src/main/resources/input.csv")
-            .getAbsolutePath());
-    System.setProperty("output",
-        "file://" + new File("/Users/jcthalys/Downloads/batch-demo/src/main/resources/output.csv")
-            .getAbsolutePath());
-
     SpringApplication.run(BatchDemoApplication.class, args);
   }
 

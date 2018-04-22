@@ -32,7 +32,7 @@ public class Step2Configuration {
   }
 
   @Bean
-  ItemWriter<Map<Integer, Integer>> fileWriter(@Value("${output}") Resource resource) {
+  ItemWriter<Map<Integer, Integer>> fileWriter(@Value("classpath:output.csv") Resource resource) {
     return new FlatFileItemWriterBuilder<Map<Integer, Integer>>()
         .name("file-writer")
         .resource(resource)
